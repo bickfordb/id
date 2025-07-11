@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+package id.v1;
+
+message ID {
+  required int64 high = 1;
+  required int64 low = 2;
+}
