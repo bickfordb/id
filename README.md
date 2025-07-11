@@ -1,6 +1,6 @@
 # ID
 
-UUID wrapper utility to help sharing IDs between [SQLite/PostgreSQL] <-> Protobuf <-> WASM environments
+UUID wrapper utility to help sharing IDs between code that uses SQLite/PostgreSQL and Protobufs
 
 ## Encoding
 
@@ -10,4 +10,4 @@ If the `sqlite` feature is enabled, values are encoded as blobs instead of the d
 
 ### Protobuf
 
-IDs are encoded as a message containing two 64 bit integer fields.
+IDs are encoded as a protobuf message containing two 64 bit integer fields. C.F. proto/id.proto
