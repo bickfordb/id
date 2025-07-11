@@ -12,7 +12,7 @@ use uuid::Uuid;
 
 #[derive(Debug, Clone, PartialEq, Eq, Error)]
 pub enum Error {
-    #[error("UUID parser error: {0}")]
+    #[error("UUID error: {0}")]
     UUID(uuid::Error),
 }
 
