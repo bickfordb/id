@@ -1,13 +1,13 @@
 # ID
 
-UUID wrapper utility to help sharing IDs between code that uses SQLite/PostgreSQL and Protobufs
+ID is a UUID newtype wrapper that enables sharing UUIDs between code that uses SQLite/PostgreSQL, Protobufs and JSON/YAML (serde)
 
-## Encoding
+## Encodings
 
 ### SQLite
 
-If the `sqlite` feature is enabled, values are encoded as blobs instead of the default text encoding.
+If the `sqlite` feature is enabled, values are encoded as 16 byte blobs instead of the inefficient sqlx text encoding (36bytes).
 
 ### Protobuf
 
-IDs are encoded as a protobuf message containing two 64 bit integer fields. C.F. proto/id.proto
+IDs are encoded as a protobuf message containing two 64 bit signed integer fields. Please see proto/id.proto
